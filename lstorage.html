@@ -1,0 +1,28 @@
+JSON
+
+parse      stringify
+
+<script>
+    let lijstje = [3,4,5];
+    let getal = 0;
+    function slaop(){
+        localStorage.setItem('zelfeennaamkiezen', JSON.stringify(lijstje));
+        localStorage.setItem('hetgetal', getal);
+    }
+    function ophogen(){
+        getal++;
+        document.getElementById('toongetal').innerHTML = getal;
+    }
+    function laden(){
+        lijstsstring = localStorage.getItem('zelfeennaamkiezen');
+        lijstje = JSON.parse(lijstsstring);
+        getal = localStorage.getItem('hetgetal');
+        document.getElementById('toongetal').innerHTML = lijstje[1] + " -- " + getal;
+
+    }
+
+</script>
+<button onclick="slaop()">slaop</button>
+<button onclick="laden()">laden</button>
+<button onclick="ophogen()">ophogen</button>
+<div id="toongetal"></div>
