@@ -19,7 +19,28 @@ body{
 <script>
 	let turn = 0;
 	let hetbord = [0, 0, 0, 0, 0, 0, 0, 0, 0];  // MODEL
+	function checkifwin(){
+		checkrij1(0,1,2);
+		checkrij1(3,4,5);
+	}
+	function checkrij1(een, twee, drie){
+		if(hetbord[een] == 1 && hetbord[twee] == 1 && hetbord[drie] == 1 ){
+			alert("x gewonnen")
+		}
+		if(hetbord[een] == 2 && hetbord[twee] == 2 && hetbord[drie] == 2 ){
+			alert("o gewonnen")
+		}
+	}
+	function checkifbordvol(){
+		for(let x = 0; x < hetbord.length; x++){
+			if(hetbord[x] == 0){
+				return;
+			}
+		}
+		alert("het bord is vol");;
+	}
 	function tick(vakjeindex){
+		
 		if(hetbord[vakjeindex] != 0){
 			alert("Dit vakje is al gespeeld")
 			return;
@@ -33,6 +54,8 @@ body{
 		}
 		console.log(hetbord);
 		tekenbord();
+		checkifwin();
+		checkifbordvol();
 	}
 	function tekenbord(){  // VIEW
 		for(let x = 0; x < hetbord.length; x++){
