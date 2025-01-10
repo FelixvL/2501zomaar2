@@ -5,6 +5,9 @@
 	height:100px;
 	background-color:red;
 	border: 2px solid blue;
+	font-size:80px;
+	padding:20px;
+	color:yellow;
 
 }
 body{
@@ -14,43 +17,37 @@ body{
 }
 </style>
 <script>
+	let turn = 0;
 	function tick(qqq){
-		//alert();
-		qqq.innerHTML = "X";
+		if(turn == 0){
+			qqq.innerHTML = "X";
+			turn = 1;
+		}else{
+			qqq.innerHTML = "O";
+			turn = 0;
+		}
+		
+
+
 //		document.getElementById("vakje"+qqq).innerHTML = "X";   // indien tick(1)
 	}
 </script>
 <body>
-<div class="vakje" onclick="tick(this)" id="vakje1"></div>
-<div class="vakje" onclick="tick(this)" id="vakje2"></div>
-<div class="vakje" onclick="tick(this)" id="vakje3"></div>
-<div class="vakje" onclick="tick(this)" id="vakje4"></div>
-<div class="vakje" onclick="tick(this)" id="vakje5"></div>
-<div class="vakje" onclick="tick(this)" id="vakje6"></div>
-<div class="vakje" onclick="tick(this)" id="vakje7"></div>
-<div class="vakje" onclick="tick(this)" id="vakje8"></div>
-<div class="vakje" onclick="tick(this)" id="vakje9"></div>
+	<div class="vakje" onclick="tick(this)" id="vakje1"></div>
+	<div class="vakje" onclick="tick(this)" id="vakje2"></div>
+	<div class="vakje" onclick="tick(this)" id="vakje3"></div>
+	<div class="vakje" onclick="tick(this)" id="vakje4"></div>
+	<div class="vakje" onclick="tick(this)" id="vakje5"></div>	
+	<div class="vakje" onclick="tick(this)" id="vakje6"></div>
+	<div class="vakje" onclick="tick(this)" id="vakje7"></div>
+	<div class="vakje" onclick="tick(this)" id="vakje8"></div>
+	<div class="vakje" onclick="tick(this)" id="vakje9"></div>
 </body>
 
-de x moet in het vakje komen waar je op klikt
+1
+als alle vakje vol zijn moet het spel een alert geven
 
-we geven alle div s een id van vakje1 tot vakje9
-dan moeten we even denken
-vakje1 moeten we dynamisch maken
-we gaan this meegeven als argument
-
-
-
-
-
-
-
-
-
-
-we moeten 3 bij 3 vakjes zien
-
-in de class .vakje  body class display inline grid  grid template colums grid template rows
+2
 
 
 
@@ -67,57 +64,15 @@ in de class .vakje  body class display inline grid  grid template colums grid te
 
 
 
-we gaan javascript
-onclick tick()
-vakje innerHTML zetten we op x mbv id vakje1
+1
+de eerste klik is een x de tweede een o de derde een x de vierde een o
+
+2
+maak een variabele turn = 0, en dan in tick if (turn == 0) dan x als (turn == 1) dan een o
+als turn 0 is moet hij 1 worden en andersom
+
+3
 
 
 
-
-
-
-je moet 2 spelers hebben een met een kruis een met een cirkel
-
-je moet 1 speler met een x hebben
-
-
-als ik op het vakje klik, moet er in het vakje een x komen
-
-
-
-
-
-
-
-
-
-
-
-
-1 vakje
-
-
-maak een div
-css een border class vakje
-
-
-
-
-
-3 by 3
-
-
-
-
-
-tictactoe RLJ
-
-
-1 Functionele Doelstelling  (Klantvraag)
----- concreet omschrijven wat je op het scherm wilt zien (NIET TECHNISCH)
-            -- als ik op de letter klik dan wordt de letter rood
-            (Als je hem kan opknippen, moet je hem opknippen / EN OOK ALSMEDE TEVENS die zijn verboden)
-2 Technische Strategie (Technisch overleg van de programmeurs)
---- je moet een technische stategie  voor de functionele doelstelling verzinnen (WEL TECHNISCH) 
-3 Coderen (zo recht mogelijk naar de finish)
 
