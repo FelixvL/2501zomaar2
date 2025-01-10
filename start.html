@@ -7,7 +7,11 @@
 	border: 2px solid blue;
 
 }
-
+body{
+	display: inline-grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
 </style>
 <script>
 	function tick(){
@@ -15,7 +19,32 @@
 		document.getElementById("vakje1").innerHTML = "X";
 	}
 </script>
+<body>
 <div class="vakje" onclick="tick()" id="vakje1"></div>
+<div class="vakje" onclick="tick()" id="vakje1"></div>
+<div class="vakje" onclick="tick()" id="vakje1"></div>
+<div class="vakje" onclick="tick()" id="vakje1"></div>
+<div class="vakje" onclick="tick()" id="vakje1"></div>
+<div class="vakje" onclick="tick()" id="vakje1"></div>
+<div class="vakje" onclick="tick()" id="vakje1"></div>
+<div class="vakje" onclick="tick()" id="vakje1"></div>
+<div class="vakje" onclick="tick()" id="vakje1"></div>
+</body>
+
+
+
+we moeten 3 bij 3 vakjes zien
+
+in de class .vakje  body class display inline grid  grid template colums grid template rows
+
+
+
+
+
+
+
+
+
 
 
 
