@@ -14,22 +14,37 @@ body{
 }
 </style>
 <script>
-	function tick(){
+	function tick(qqq){
 		//alert();
-		document.getElementById("vakje1").innerHTML = "X";
+		qqq.innerHTML = "X";
+//		document.getElementById("vakje"+qqq).innerHTML = "X";   // indien tick(1)
 	}
 </script>
 <body>
-<div class="vakje" onclick="tick()" id="vakje1"></div>
-<div class="vakje" onclick="tick()" id="vakje1"></div>
-<div class="vakje" onclick="tick()" id="vakje1"></div>
-<div class="vakje" onclick="tick()" id="vakje1"></div>
-<div class="vakje" onclick="tick()" id="vakje1"></div>
-<div class="vakje" onclick="tick()" id="vakje1"></div>
-<div class="vakje" onclick="tick()" id="vakje1"></div>
-<div class="vakje" onclick="tick()" id="vakje1"></div>
-<div class="vakje" onclick="tick()" id="vakje1"></div>
+<div class="vakje" onclick="tick(this)" id="vakje1"></div>
+<div class="vakje" onclick="tick(this)" id="vakje2"></div>
+<div class="vakje" onclick="tick(this)" id="vakje3"></div>
+<div class="vakje" onclick="tick(this)" id="vakje4"></div>
+<div class="vakje" onclick="tick(this)" id="vakje5"></div>
+<div class="vakje" onclick="tick(this)" id="vakje6"></div>
+<div class="vakje" onclick="tick(this)" id="vakje7"></div>
+<div class="vakje" onclick="tick(this)" id="vakje8"></div>
+<div class="vakje" onclick="tick(this)" id="vakje9"></div>
 </body>
+
+de x moet in het vakje komen waar je op klikt
+
+we geven alle div s een id van vakje1 tot vakje9
+dan moeten we even denken
+vakje1 moeten we dynamisch maken
+we gaan this meegeven als argument
+
+
+
+
+
+
+
 
 
 
