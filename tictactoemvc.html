@@ -1,0 +1,60 @@
+
+<style>
+.vakje{
+	width:100px;
+	height:100px;
+	background-color:red;
+	border: 2px solid blue;
+	font-size:80px;
+	padding:20px;
+	color:yellow;
+
+}
+body{
+	display: inline-grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
+</style>
+<script>
+	let turn = 0;
+	let hetbord = [0, 0, 0, 0, 0, 0, 0, 0, 0];  // MODEL
+	function tick(vakjeindex){
+		if(hetbord[vakjeindex] != 0){
+			alert("Dit vakje is al gespeeld")
+			return;
+		}
+		if(turn == 0){
+			hetbord[vakjeindex] = 1;
+			turn = 1;
+		}else{
+			hetbord[vakjeindex] = 2;
+			turn = 0;
+		}
+		console.log(hetbord);
+		tekenbord();
+	}
+	function tekenbord(){  // VIEW
+		for(let x = 0; x < hetbord.length; x++){
+			if(hetbord[x] == 0){
+				document.getElementById("vakje" + (x+1)).innerHTML = "";
+			}else if(hetbord[x] == 1){
+				document.getElementById("vakje" + (x+1)).innerHTML = "X";
+			}else{
+				document.getElementById("vakje" + (x+1)).innerHTML = "O";
+			}
+		}
+	}
+	window.onload = tekenbord;
+</script>
+<body>
+	<div class="vakje" onclick="tick(0)" id="vakje1"></div>
+	<div class="vakje" onclick="tick(1)" id="vakje2"></div>
+	<div class="vakje" onclick="tick(2)" id="vakje3"></div>
+	<div class="vakje" onclick="tick(3)" id="vakje4"></div>
+	<div class="vakje" onclick="tick(4)" id="vakje5"></div>	
+	<div class="vakje" onclick="tick(5)" id="vakje6"></div>
+	<div class="vakje" onclick="tick(6)" id="vakje7"></div>
+	<div class="vakje" onclick="tick(7)" id="vakje8"></div>
+	<div class="vakje" onclick="tick(8)" id="vakje9"></div>
+</body>
